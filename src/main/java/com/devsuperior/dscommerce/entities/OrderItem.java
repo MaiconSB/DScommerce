@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "tb_ordem_item")
+@Table(name = "tb_order_item")
 public class OrderItem {
 
 	@EmbeddedId
@@ -16,9 +16,9 @@ public class OrderItem {
 	
 	OrderItem() {}
 
-	public OrderItem(Product product, Order order, Integer quantity, Double price) {
-		id.setProduct(product);
+	public OrderItem(Order order, Product product, Integer quantity, Double price) {
 		id.setOrder(order);
+		id.setProduct(product);
 		this.quantity = quantity;
 		this.price = price;
 	}

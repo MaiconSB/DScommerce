@@ -18,18 +18,18 @@ public class Payment {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Instant moment;
 	
 	@OneToOne
 	@MapsId
 	private Order order;
+	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+	private Instant moment;
+	
 
-	public Payment(Long id, Instant moment, Order order) {
-		super();
+	public Payment(Long id, Order order, Instant moment) {
 		this.id = id;
-		this.moment = moment;
 		this.order = order;
+		this.moment = moment;
 	}
 
 	public Long getId() {

@@ -22,11 +22,11 @@ public class Product {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String nome;
+	private String name;
+	private Double price;
 	
 	@Column(columnDefinition = "TEXT")
 	private String description;
-	private Double price;
 	private String imgUrl;
 	
 	@ManyToMany
@@ -40,11 +40,11 @@ public class Product {
 	
 	public Product() {}
 
-	public Product(Long id, String nome, String description, Double price, String imgUrl) {
+	public Product(Long id, String description, String name, Double price, String imgUrl) {
 		this.id = id;
-		this.nome = nome;
-		this.description = description;
+		this.name = name;
 		this.price = price;
+		this.description = description;
 		this.imgUrl = imgUrl;
 	}
 
@@ -56,12 +56,12 @@ public class Product {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getDescription() {
