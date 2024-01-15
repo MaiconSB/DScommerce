@@ -51,3 +51,22 @@ no sistema (client, admin).
 
 <img width="579" alt="Modelo de domínio DSCommerce" src="https://github.com/MaiconSB/DScommerce/assets/118266551/53552413-7173-47a9-a20e-6dd6559263d3">
 
+### Figma
+
+Este projeto foi desenvolvido utilizando o Figma para o design, proporcionando uma experiência visual intuitiva e colaborativa. Confira aqui conceitos: 
+![Cart](https://github.com/MaiconSB/DScommerce/assets/118266551/65f4d822-bdf4-4b1a-a68c-de446ec66bec)
+
+![Cart](https://github.com/MaiconSB/DScommerce/assets/118266551/e00b5ec0-f18c-454e-867f-20499ed52981)
+
+![Confirmation](https://github.com/MaiconSB/DScommerce/assets/118266551/b0a37887-b786-48d6-960e-724ebeee81b0)
+
+![Confirmation](https://github.com/MaiconSB/DScommerce/assets/118266551/21926514-4a05-40f5-a3ae-fada9d04750a)
+         
+Para saber mais, [só clicar no link do figma](https://www.figma.com/file/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce?type=design&node-id=0-1&mode=design&t=TLZjfi697KL8R4Hp-0)
+ 
+
+
+
+
+
+
