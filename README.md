@@ -53,16 +53,22 @@ no sistema (client, admin).
 
 ### Figma
 
-Este projeto foi desenvolvido utilizando o Figma para o design, proporcionando uma experiência visual intuitiva e colaborativa. Confira aqui conceitos: 
-![Cart](https://github.com/MaiconSB/DScommerce/assets/118266551/65f4d822-bdf4-4b1a-a68c-de446ec66bec)
+Este projeto foi desenvolvido utilizando o Figma para o design, proporcionando uma experiência visual intuitiva e colaborativa. Confira aqui conceitos:
 
-![Cart](https://github.com/MaiconSB/DScommerce/assets/118266551/e00b5ec0-f18c-454e-867f-20499ed52981)
+#### Cart
+<img width="579" alt="Cart" src="https://github.com/MaiconSB/DScommerce/assets/118266551/65f4d822-bdf4-4b1a-a68c-de446ec66bec">
 
-![Confirmation](https://github.com/MaiconSB/DScommerce/assets/118266551/b0a37887-b786-48d6-960e-724ebeee81b0)
+#### Catolog
+<img width="579" alt="Catolog" src="https://github.com/MaiconSB/DScommerce/assets/118266551/9d37511c-2bb0-427c-8a4b-0364ab4a8b5a">
 
-![Confirmation](https://github.com/MaiconSB/DScommerce/assets/118266551/21926514-4a05-40f5-a3ae-fada9d04750a)
+#### Confirmation
+<img width="579" alt="Confirmation" src="https://github.com/MaiconSB/DScommerce/assets/118266551/aec8f024-b4f4-476e-8bf2-09131862d361">
+
+#### Login
+<img width="579" alt="Login" src="https://github.com/MaiconSB/DScommerce/assets/118266551/fb6ef2b4-9b03-46f6-839f-5dbffbf25a96">
+
          
-Para saber mais, [só clicar no link do figma](https://www.figma.com/file/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce?type=design&node-id=0-1&mode=design&t=TLZjfi697KL8R4Hp-0)
+### [Para saber mais!](https://www.figma.com/file/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce?type=design&node-id=0-1&mode=design&t=TLZjfi697KL8R4Hp-0)
  
 
 
