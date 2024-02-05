@@ -24,7 +24,7 @@ public class User {
 	    joinColumns = @JoinColumn(name = "user_id"),
 		inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
-	
+
 	@OneToMany(mappedBy = "client")
 	private List<Order> orders = new ArrayList<>();
 	
@@ -93,11 +93,16 @@ public class User {
 		return orders;
 	}
 
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+
 	public void addRole(Role role) {
 		roles.add(role);
 	}
 
-	public boolean HasRole(String roleName) {
+	public boolean hasRole(String roleName) {
 		for (Role role : roles) {
 			if (role.getAuthority().equals(roleName)) {
 				return true;
@@ -106,10 +111,12 @@ public class User {
 		return false;
 	}
 
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -122,7 +129,5 @@ public class User {
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 	
 }
