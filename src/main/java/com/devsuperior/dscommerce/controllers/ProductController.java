@@ -2,6 +2,7 @@ package com.devsuperior.dscommerce.controllers;
 
 import java.net.URI;
 
+import com.devsuperior.dscommerce.DTO.ProductMinDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -22,7 +23,7 @@ public class ProductController {
 	@Autowired
 	private ProductService service;
 
-	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_OPERATOR')")
+
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<ProductDTO> findById(@PathVariable Long id) {
 		ProductDTO dto = service.findByID(id);
@@ -30,9 +31,9 @@ public class ProductController {
 	}
 	
 	@GetMapping
-	public ResponseEntity<Page<ProductDTO>> findAll(@RequestParam (name = "name", defaultValue = "")
+	public ResponseEntity<Page<ProductMinDTO>> findAll(@RequestParam (name = "name", defaultValue = "")
 		String name, Pageable pageable) {
-		Page<ProductDTO> dto = service.findAll(name, pageable);
+		Page<ProductMinDTO> dto = service.findAll(name, pageable);
 		return ResponseEntity.ok(dto);
 	}
 
