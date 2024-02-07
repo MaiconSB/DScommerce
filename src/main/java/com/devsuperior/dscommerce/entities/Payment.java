@@ -25,7 +25,8 @@ public class Payment {
 	private Order order;
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant moment;
-	
+
+	public Payment() {	}
 
 	public Payment(Long id, Order order, Instant moment) {
 		this.id = id;
