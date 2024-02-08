@@ -1,78 +1,64 @@
-### Premissas
+# DSCommerce
+### Visão Geral
+O DSCommerce é uma plataforma de comércio eletrônico desenvolvida para facilitar a experiência de compra de produtos oferecidos pela DevSuperior, proporcionando aos clientes uma interface intuitiva e funcionalidades essenciais para realizar suas compras de forma rápida e conveniente.
 
-Deve ser um sistema que possua um modelo de domínio relativamente simples,
-porém abrangente, ou seja, que explore vários tipos de relacionamentos entre as
-entidades de negócio (muitos-para-um, muitos-para-muitos, etc.).
+## Como Funciona o DSCommerce
 
-O sistema deve possibilitar a aplicação de vários conhecimentos importantes das
-disciplinas de fundamentos.
+### Funcionalidades Principais
 
-O sistema deve conter as principais funcionalidades que se espera de um
-profissional iniciante deve saber construir, tais como telas de cadastro e fluxos de
-caso de uso.
+#### Consultar Catálogo de Produtos
+Os usuários podem navegar pelo catálogo de produtos disponíveis na plataforma, explorando os itens oferecidos pela DevSuperior. Eles podem visualizar detalhes dos produtos, como nome, descrição, preço e imagem.
 
-### Visão geral do sistema
+#### Gerenciar Carrinho de Compras
+Os clientes podem adicionar produtos ao carrinho de compras, remover itens e alterar as quantidades conforme desejado. O carrinho de compras fornece uma visão consolidada dos produtos selecionados e o valor total da compra.
 
-O sistema deve manter um cadastro de usuário, produtos e suas categorias. Cada
-usuário possui nome, email, telefone, data de nascimento e uma senha de acesso. Os
-dados dos produtos são: nome, descrição, preço e imagem. O sistema deve apresentar
-um catálogo de produtos, os quais podem ser filtrados pelo nome do produto. A partir
-desse catálogo, o usuário pode selecionar um produto para ver seus detalhes e para
-decidir se o adiciona a um carrinho de compras. 
+#### Realizar Pedidos
+Após selecionar os produtos desejados, os clientes podem proceder para o checkout e registrar um pedido. O sistema armazena informações sobre os itens selecionados, gerando um registro de pedido com um status inicial de "aguardando pagamento".
 
-O usuário pode incluir e remover itens do carrinho de compra, bem como alterar as quantidades de cada item. Uma vez que o
-usuário decida encerrar o pedido, o pedido deve então ser salvo no sistema com o status
-de "aguardando pagamento". Os dados de um pedido são: instante em que ele foi salvo,
-status, e uma lista de itens, onde cada item se refere a um produto e sua quantidade no
-pedido. 
+#### Autenticação de Usuários
+O DSCommerce oferece funcionalidades de autenticação de usuários, permitindo que os clientes façam login em suas contas para acessar recursos adicionais, como visualizar o histórico de pedidos e atualizar suas informações pessoais.
 
-O status de um pedido pode ser: aguardando pagamento, pago, enviado,
-entregue e cancelado. Quando o usuário paga por um pedido, o instante do pagamento
-deve ser registrado. Os usuários do sistema podem ser clientes ou administradores,
-sendo que todo usuário cadastrado por padrão é cliente. Usuários não identificados
-podem se cadastrar no sistema, navegar no catálogo de produtos e no carrinho de
-compras. 
-
-Clientes podem atualizar seu cadastro no sistema, registrar pedidos e visualizar
-seus próprios pedidos. Usuários administradores tem acesso à área administrativa onde
-pode acessar os cadastros de usuários, produtos e categorias.
-
-### Modelo conceitual
-
-Este é o modelo conceitual do sistema DSCommerce. Considerações:
-
-Cada item de pedido (OrderItem) corresponde a um produto no pedido, com uma
-quantidade. Sendo que o preço também é armazenado no item de pedido por
-questões de histórico (se o preço do produto mudar no futuro, o preço do item de
-pedido continua registrado com o preço real que foi vendido na época).
-
-Um usuário pode ter um ou mais "roles", que são os perfis de acesso deste usuário
-no sistema (client, admin).
-
-<img width="579" alt="Modelo de domínio DSCommerce" src="https://github.com/MaiconSB/DScommerce/assets/118266551/53552413-7173-47a9-a20e-6dd6559263d3">
-
-### Figma
-
-Este projeto foi desenvolvido utilizando o Figma para o design, proporcionando uma experiência visual intuitiva e colaborativa. Confira aqui conceitos:
-
-#### Cart
-<img width="579" alt="Cart" src="https://github.com/MaiconSB/DScommerce/assets/118266551/65f4d822-bdf4-4b1a-a68c-de446ec66bec">
-
-#### Catolog
-<img width="579" alt="Catolog" src="https://github.com/MaiconSB/DScommerce/assets/118266551/9d37511c-2bb0-427c-8a4b-0364ab4a8b5a">
-
-#### Confirmation
-<img width="579" alt="Confirmation" src="https://github.com/MaiconSB/DScommerce/assets/118266551/aec8f024-b4f4-476e-8bf2-09131862d361">
-
-#### Login
-<img width="579" alt="Login" src="https://github.com/MaiconSB/DScommerce/assets/118266551/fb6ef2b4-9b03-46f6-839f-5dbffbf25a96">
-
-         
-### [Para saber mais!](https://www.figma.com/file/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce?type=design&node-id=0-1&mode=design&t=TLZjfi697KL8R4Hp-0)
- 
+#### Administração do Sistema
+Os administradores têm acesso a recursos adicionais para gerenciar o sistema, incluindo a capacidade de adicionar, atualizar e excluir produtos, categorias e usuários. Eles também podem visualizar relatórios de pedidos e marcar pedidos como pagos após receberem confirmação de pagamento.
 
 
 
+### Resumo das Funcionalidades
+- Consultar catálogo de produtos.
+- Manter produtos: CRUD de produtos, filtragem por nome (disponível apenas para administradores).
+- Manter categorias: CRUD de categorias, filtragem por nome (disponível apenas para administradores).
+- Gerenciar carrinho: adicionar, remover e alterar quantidades de itens no carrinho de compras.
+- Login: autenticação de usuários.
+- Registrar pedido: salvar um pedido com base nos itens no carrinho de compras.
+- Atualizar perfil: permitir que os usuários atualizem suas informações pessoais.
+- Visualizar pedidos: ver o histórico de pedidos do usuário.
+- Registrar pagamento: marcar um pedido como pago (disponível apenas para administradores).
+- Reportar pedidos: gerar relatórios de pedidos (disponível apenas para administradores).
 
+### Tecnologias Utilizadas
+O DSCommerce foi desenvolvido utilizando tecnologias modernas e frameworks populares, incluindo:
+- Spring Boot: framework utilizado para desenvolver aplicativos em Java de forma rápida e fácil.
+- Hibernate: framework ORM (Object-Relational Mapping) para mapeamento objeto-relacional.
+- H2 Database: banco de dados em memória para desenvolvimento e testes.
+- Spring Security: para autenticação e controle de acesso.
+- ModelMapper: para mapeamento de objetos DTO (Data Transfer Object).
+- Bean Validation: para validação de dados.
+- JWT (JSON Web Tokens): para autenticação baseada em tokens.
 
+### Protótipos de Tela
+Protótipos das telas do sistema podem ser encontrados [aqui](https://www.figma.com/file/ZrGNVNG0kZL6txDv4G8P6s/DSCommerce).
+
+### Modelo Conceitual
+O modelo conceitual do sistema DSCommerce inclui entidades como Usuário, Produto, Categoria e Pedido, com relacionamentos entre elas. 
+
+### Como Executar o Projeto
+1. Clone o repositório do GitHub.
+2. Abra o projeto em sua IDE preferida.
+3. Certifique-se de que você tem o JDK e o Maven instalados.
+4. Configure as dependências do projeto conforme necessário (o arquivo `pom.xml` contém as dependências).
+5. Execute a aplicação Spring Boot.
+6. Acesse `http://localhost:8080` em seu navegador para interagir com o sistema.
+
+#### Contribuindo
+Contribuições são bem-vindas! Sinta-se à vontade para fazer um fork do projeto, adicionar suas melhorias e enviar uma solicitação de pull request.
 
